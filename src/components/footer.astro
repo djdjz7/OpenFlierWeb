@@ -2,36 +2,23 @@
 import { Icon } from "astro-icon";
 import HeroImage from "~/components/hero-image.astro";
 import type { FooterLink } from "~/types";
+import {Image} from "@astrojs/image/components"
+import bannerImage from "~/assets/banner.png"
 
 const links: Array<FooterLink> = [
   {
-    url: "https://astro.build/",
-    description: "Astro's official website",
-    icon: "mdi:home",
-  },
-  {
-    url: "https://github.com/mhyfritz/astro-landing-page",
+    url: "https://github.com/djdjz7/OpenFlier",
     description: "View source on GitHub",
     icon: "fa-brands:github-alt",
-  },
-  {
-    url: "https://astro.build/chat",
-    description: "Astro on Discord",
-    icon: "fa-brands:discord",
-  },
-  {
-    url: "https://twitter.com/astrodotbuild",
-    description: "Astro on Twitter",
-    icon: "fa-brands:twitter",
   },
 ];
 ---
 
 <footer class="relative flex h-64 items-center justify-center">
-  <div class="absolute inset-0 overflow-hidden opacity-40">
-    <HeroImage />
+  <div class="absolute inset-0 overflow-hidden opacity-40 w-full h-full bg-[url('assets/banner.png')] bg-cover">
+    
   </div>
-  <ul class="relative grid grid-cols-2 gap-4 sm:grid-cols-4">
+  <ul class="relative grid self-center">
     {
       links.map((link) => (
         <li>
