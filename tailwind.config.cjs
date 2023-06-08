@@ -18,6 +18,7 @@ module.exports = {
       backgroundColor: {
         default: "var(--color-background)",
         offset: "var(--color-background-offset)",
+        blur: "var(--color-blur-background)",
       },
       borderColor: {
         default: "var(--color-border)",
